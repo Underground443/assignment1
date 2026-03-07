@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>語言學習卡片</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="intro-screen">
+        <div id="intro-content">
+            <h1>輕鬆學習新語言</h1>
+            <p>透過單字卡和測驗掌握新詞彙。</p>
+            <button id="get-started-button" class="start-button">Get Started</button>
+        </div>
+    </div>
+
+    <div id="language-selection-container" style="display: none;">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="Squirtle" class="pokemon-art" id="squirtle">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Bulbasaur" class="pokemon-art" id="bulbasaur">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png" alt="Psyduck" class="pokemon-art" id="psyduck">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pikachu" class="pokemon-art" id="pikachu">
+        <div id="language-choice-wrapper">
+            <h1>請選擇您想學習的語言</h1>
+            <div id="language-checkboxes">
+                <!-- Checkboxes will be dynamically inserted here -->
+            </div>
+            <button id="start-learning-button" class="start-button">Start Learning</button>
+        </div>
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png" alt="Jigglypuff" class="pokemon-art" id="jigglypuff">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" alt="Eevee" class="pokemon-art" id="eevee">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png" alt="Meowth" class="pokemon-art" id="meowth">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="Charmander" class="pokemon-art" id="charmander">
+    </div>
+
+    <div class="container" style="display: none;">
+        <button id="back-to-menu-button">Back to menu</button>
+        <h1>語言學習卡片</h1>
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front" id="flashcard-front"></div>
+                    <div class="flashcard-back" id="flashcard-back"></div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="flip-button">Flip</button>
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+            <button id="test-mode-button">Test Mode</button>
+            <button id="multiple-choice-button">Multiple Choice</button>
+        </div>
+        <div id="test-container" style="display: none;">
+            <div class="test-options">
+                <label for="test-direction">Test Direction:</label>
+                <select id="test-direction">
+                    <option value="zh-en">Chinese to English</option>
+                    <option value="en-zh">English to Chinese</option>
+                </select>
+            </div>
+            <div id="timer">00:30</div>
+            <button id="exit-test-mode-button">Exit Test Mode</button>
+            <div id="multiple-choice-options">
+                <!-- Choices will be generated here -->
+            </div>
+            <input type="text" id="answer-input" placeholder="Enter translation" style="display: none;">
+            <button id="submit-answer-button" style="display: none;">Submit</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <div id="achievement-toast" class="hidden">
+        <div id="achievement-title"></div>
+        <div id="achievement-desc"></div>
+    </div>
+</body>
+</html>
